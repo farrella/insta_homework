@@ -2,6 +2,10 @@
   <h1>Photo #<%= @photo.id %></h1>
 </div>
 
+<p><a href="/comments/new" class="btn btn-primary">Add a New Comment</a></p>
+<p></p>
+<p></p>
+
 <dl class="dl-horizontal">
   <dt>Image url</dt>
   <dd><img src="<%= @photo.image_url %>" width="480"></dd>
@@ -16,7 +20,9 @@
   <dt>Comments</dt>
   <dd>
   	<% @photo.comments.each do |comment| %>
- 	<%= comment.content %>
+ 	<div><%= comment.content %>
+		 -  <%= comment.user_id%>
+ 	</div>
  	<% end %>
   </dd>
 </dl>
