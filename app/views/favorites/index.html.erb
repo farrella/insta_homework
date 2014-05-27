@@ -18,7 +18,7 @@
   <tbody>
     <% @favorites.each do |favorite| %>
       <tr>
-        <td><%= favorite.photo_id %></td>
+        <td><image src="<%= favorite.photo.image_url %>"width="60"</td>
         <td><%= favorite.user_id %></td>
         <td>
           <a href="/favorites/<%= favorite.id %>" class="btn btn-primary">
