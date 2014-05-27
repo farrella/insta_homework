@@ -7,5 +7,7 @@ class User < ActiveRecord::Base
 
 has_many :favorites
 has_many :photos
+has_many :favorite_photos, :through => :favorites, :source => :photo
+
 
 end
